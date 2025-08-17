@@ -4,7 +4,7 @@ import logo from './assets/logo.png';
 const App = () => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-white text-gray-800">
-      <img src={logo} alt="WeTreat Logo" className="w-48 mb-6" />
+      <img src={logo} alt="WeTreat Logo" className="w-24 mb-6" />
       <h1 className="text-2xl font-semibold mb-4">Welcome to WeTreat</h1>
       <p className="text-lg mb-6">Please choose your role to continue:</p>
       <div className="space-x-4">
