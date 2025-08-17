@@ -20,6 +20,17 @@ app.add_middleware(
 async def health():
     return {"status": "ok"}
 
+import asyncio
+from alembic import command
+from alembic.config import Config
+import os
+
+@app.on_event("startup")
+async def run_alembic_migrations():
+    if os.getenv("RUN_MIGRATIONS", "true") == "true":
+        cfg = Config("alembic.ini")
+        command.upgrade(cfg, "head")
+
 # Routers
 app.include_router(auth.router)
 app.include_router(intake.router)
