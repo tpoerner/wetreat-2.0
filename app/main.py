@@ -40,4 +40,4 @@ app.include_router(consultations.router)
 
 @app.get("/ping")
 def ping():
-    return {"status": "ok"}
+    return {"message": "pong"}
