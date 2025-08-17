@@ -1,17 +1,18 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 
-const App = () => (
-  <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 text-gray-800">
-    <h1 className="text-4xl font-bold mb-4">WeTreat Platform</h1>
-    <p className="text-lg">Welcome! Select your role to continue.</p>
-    <div className="mt-6 space-x-4">
-      <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Admin</button>
-      <button className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Physician</button>
-      <button className="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700">Patient Input</button>
+const App = () => {
+  return (
+    <div style={{ padding: '2rem', textAlign: 'center' }}>
+      <h1 style={{ fontSize: '2rem', color: '#333' }}>✅ WeTreat Frontend is Working!</h1>
+      <p style={{ color: '#666' }}>If you see this message, React is alive.</p>
     </div>
-  </div>
-)
+  );
+};
 
-ReactDOM.createRoot(document.getElementById('root')).render(<App />)
-
+const root = document.getElementById('root');
+if (root) {
+  ReactDOM.createRoot(root).render(<App />);
+} else {
+  console.error('❌ Could not find #root in index.html');
+}
