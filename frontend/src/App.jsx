@@ -1,30 +1,43 @@
 import React from 'react';
 import logo from './assets/logo.png';
 
-const App = () => {
+export default function App() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-white text-gray-800 p-4">
-      {/* Logo smaller now: w-16 = ~64px */}
-      <img src={logo} alt="WeTreat Logo" className="w-16 mb-4" />
-      
-      <h1 className="text-2xl font-semibold mb-2">Welcome to WeTreat</h1>
-      <p className="text-md mb-6 text-gray-600">
+    <div style={{
+      minHeight: '100vh',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      background: '#fff',
+      color: '#1f2937',
+      padding: '1rem'
+    }}>
+      {/* Force the logo to 64px width no matter what */}
+      <img src={logo} alt="WeTreat Logo" style={{ width: 64, height: 'auto', marginBottom: 16 }} />
+
+      <h1 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: 8 }}>Welcome to WeTreat</h1>
+      <p style={{ fontSize: '1rem', color: '#6b7280', marginBottom: 24 }}>
         Please choose your role to continue:
       </p>
 
-      <div className="flex space-x-3">
-        <button className="bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700">
-          Admin
-        </button>
-        <button className="bg-green-600 text-white px-4 py-2 rounded-lg shadow hover:bg-green-700">
-          Physician
-        </button>
-        <button className="bg-gray-600 text-white px-4 py-2 rounded-lg shadow hover:bg-gray-700">
-          Patient Input
-        </button>
+      <div style={{ display: 'flex', gap: 12 }}>
+        <button style={btn('#2563eb')}>Admin</button>
+        <button style={btn('#16a34a')}>Physician</button>
+        <button style={btn('#4b5563')}>Patient Input</button>
       </div>
     </div>
   );
-};
+}
 
-export default App;
+function btn(bg) {
+  return {
+    background: bg,
+    color: '#fff',
+    padding: '0.5rem 1rem',
+    borderRadius: 10,
+    border: 'none',
+    cursor: 'pointer',
+    boxShadow: '0 2px 6px rgba(0,0,0,0.15)'
+  };
+}
