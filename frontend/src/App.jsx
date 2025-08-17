@@ -14,9 +14,9 @@ export default function App() {
       padding: '1rem'
     }}>
       {/* Force the logo to 64px width no matter what */}
-      <img src={logo} alt="WeTreat Logo" style={{ width: 64, height: 'auto', marginBottom: 16 }} />
+      <img src={logo} alt="WeTreat Logo" style={{ width: 256, height: 'auto', marginBottom: 16 }} />
 
-      <h1 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: 8 }}>Welcome to WeTreat</h1>
+      <h1 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: 8 }}>Welcome to WeTreat Cardiovascular Consultation Platform</h1>
       <p style={{ fontSize: '1rem', color: '#6b7280', marginBottom: 24 }}>
         Please choose your role to continue:
       </p>
